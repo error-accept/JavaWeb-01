@@ -66,7 +66,6 @@
         List<TTeacher> teachers = (List<TTeacher>) session.getAttribute("teachers");
         System.out.println(teachers);
         for (TTeacher t:teachers) { %>
-
     <tr>
         <th><p><%=t.getName()%></p></th>
         <th> <p><%=t.getDesc()%></p></th>
@@ -81,6 +80,4 @@
 <a href="addTeacher.jsp">添加候选人</a>
 <a href="/JavaWeb-01/userDetail">查看所有用户</a>
 <a href="/JavaWeb-01/voteDetail">查看投票纪录</a>
-
-
 </html>
