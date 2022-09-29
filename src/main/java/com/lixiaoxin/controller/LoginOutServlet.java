@@ -1,4 +1,4 @@
-package generator.controller;
+package com.lixiaoxin.controller;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

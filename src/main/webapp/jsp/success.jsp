@@ -1,4 +1,4 @@
-<%@ page import="generator.domain.TUser" %><%--
+<%@ page import="com.lixiaoxin.domain.TUser" %><%--
   Created by IntelliJ IDEA.
   User: lixiaoxin
   Date: 2022/9/25

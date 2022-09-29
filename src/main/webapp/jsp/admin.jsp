@@ -1,4 +1,5 @@
-<%--
+<%@ page import="com.lixiaoxin.domain.TTeacher" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: lixiaoxin
   Date: 2022/9/25
@@ -9,23 +10,33 @@
 <html>
 <head>
     <title>管理员后台界面</title>
+        <style>
+            body{
+                align-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            table{
+                border-top: 3px solid blue;
+                border-left: 3px solid blue;
+                border-spacing: 0;
+            }
+            table th{
+                border-bottom: 3px solid blue;
+                border-right: 3px solid blue;
+                margin:auto;
+            }
+        </style>
+        </style>
 </head>
 <body>
-<%@ page import="generator.domain.TUser" %>
-<%@ page import="generator.domain.TTeacher" %>
+<%@ page import="com.lixiaoxin.domain.TUser" %>
+<%@ page import="com.lixiaoxin.domain.TTeacher" %>
 <%@ page import="java.util.List" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: lixiaoxin
-  Date: 2022/9/24
-  Time: 17:41
-  To change this template use File | Settings | File Templates.
---%>
-<%--<%@ include file="checkLog.jsp"%>--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core"%>
 <%@page isELIgnored="false" %>
-<%
+    <%
     TUser user = (TUser) session.getAttribute("user") ;
     System.out.println(user);
 
@@ -33,28 +44,14 @@
 %>
 <h1>未登录！！</h1>
 <h3>3秒后跳转到登录界面</h3>
-<%
+    <%
         response.setHeader("refresh","3;URL=login.jsp");
         return ;
     }
 %>
-<html>
-<head>
-    <title>投票系统主界面</title>
-
-
-</head>
-<body>
 <h1>欢迎来到投票系统</h1>
-<%--<% String username= (String) request.getAttribute("username"); %>--%>
 <h2>你好 ${username}</h2>
 <span><a  href="/JavaWeb-01/logout">退出</a></span>
-<a href="http://baidu.com">百度</a>
-<html>
-<head>
-    <title>客户管理</title>
-</head>
-<body>
 <table>
     <tr>
         <th>name</th>
@@ -66,7 +63,7 @@
         <th>允许投票</th>
     </tr>
     <%
-        List<TTeacher>  teachers = (List<TTeacher>) session.getAttribute("teachers");
+        List<TTeacher> teachers = (List<TTeacher>) session.getAttribute("teachers");
         System.out.println(teachers);
         for (TTeacher t:teachers) { %>
 
@@ -86,13 +83,4 @@
 <a href="/JavaWeb-01/voteDetail">查看投票纪录</a>
 
 
-</body>
-</html>
-
-
-</body>
-</html>
-
-
-</body>
 </html>

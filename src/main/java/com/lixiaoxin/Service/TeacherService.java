@@ -1,8 +1,8 @@
-package generator.Service;
+package com.lixiaoxin.Service;
 
-import generator.Util.SqlUtil;
-import generator.domain.TTeacher;
-import generator.mapper.TTeacherMapper;
+import com.lixiaoxin.Util.SqlUtil;
+import com.lixiaoxin.domain.TTeacher;
+import com.lixiaoxin.mapper.TTeacherMapper;
 
 import java.util.List;
 

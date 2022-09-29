@@ -1,8 +1,7 @@
-package generator.controller;
+package com.lixiaoxin.controller;
 
-import freemarker.core._ArrayEnumeration;
-import generator.Service.TeacherService;
-import generator.domain.TTeacher;
+import com.lixiaoxin.Service.TeacherService;
+import com.lixiaoxin.domain.TTeacher;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
-import java.util.Map;
+
 @WebServlet("/addTeacher")
 public class addTeacherServlet extends HttpServlet {
     @Override
@@ -32,8 +31,6 @@ public class addTeacherServlet extends HttpServlet {
         tTeacher.setDesc(des);
         tTeacher.setGender(sex);
         tTeacher.setStatues(1);
-        tTeacher.setFavNum(null);
-        tTeacher.setUnfavNum(null);
         int flag=teacherService.addTeacher(tTeacher);
         if(flag==1){
             List<TTeacher> teachers = teacherService.getall();

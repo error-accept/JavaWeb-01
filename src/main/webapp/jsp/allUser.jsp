@@ -1,6 +1,6 @@
-<%@ page import="generator.domain.TTeacher" %>
+<%@ page import="com.lixiaoxin.domain.TTeacher" %>
 <%@ page import="java.util.List" %>
-<%@ page import="generator.domain.TUser" %><%--
+<%@ page import="com.lixiaoxin.domain.TUser" %><%--
   Created by IntelliJ IDEA.
   User: lixiaoxin
   Date: 2022/9/25
@@ -11,6 +11,23 @@
 <html>
 <head>
     <title>用户详情</title>
+    <style>
+        body{
+            align-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        table{
+            border-top: 3px solid blue;
+            border-left: 3px solid blue;
+            border-spacing: 0;
+        }
+        table th{
+            border-bottom: 3px solid blue;
+            border-right: 3px solid blue;
+            margin:auto;
+        }
+    </style>
 </head>
 <body>
 <div>点击<a href="jsp/main.jsp">这里</a>返回</div>

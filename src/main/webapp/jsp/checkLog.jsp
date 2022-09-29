@@ -1,4 +1,4 @@
-<%@ page import="generator.domain.TUser" %><%--
+<%@ page import="com.lixiaoxin.domain.TUser" %><%--
   Created by IntelliJ IDEA.
   User: lixiaoxin
   Date: 2022/9/24
@@ -15,7 +15,6 @@
 <%
     TUser user = (TUser) session.getAttribute("user") ;
     System.out.println(user);
-
     if(session.getAttribute("username").equals("root")){
         response.sendRedirect("admin.jsp");
     }

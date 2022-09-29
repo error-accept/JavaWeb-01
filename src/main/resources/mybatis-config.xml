@@ -15,7 +15,7 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="mapper/TCommentMapper.xml"/>
+<!--        <mapper resource="mapper/TCommentMapper.xml"/>-->
         <mapper resource="mapper/TVoteMapper.xml"/>
         <mapper resource="mapper/TTeacherMapper.xml"/>
         <mapper resource="mapper/TUserMapper.xml"/>

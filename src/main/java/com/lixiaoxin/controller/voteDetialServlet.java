@@ -1,6 +1,6 @@
-package generator.controller;
+package com.lixiaoxin.controller;
 
-import generator.Service.VoteService;
+import com.lixiaoxin.Service.VoteService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

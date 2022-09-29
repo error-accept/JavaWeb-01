@@ -1,9 +1,9 @@
-package generator.controller;
+package com.lixiaoxin.controller;
 
-import generator.Service.TeacherService;
-import generator.Service.UserService;
-import generator.domain.TTeacher;
-import generator.domain.TUser;
+import com.lixiaoxin.Service.TeacherService;
+import com.lixiaoxin.Service.UserService;
+import com.lixiaoxin.domain.TTeacher;
+import com.lixiaoxin.domain.TUser;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
-import java.util.logging.Logger;
 
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
@@ -39,7 +38,6 @@ public class LoginServlet extends HttpServlet {
 //                return;
 //            }
             resp.sendRedirect("jsp/main.jsp");
-//            req.getRequestDispatcher("/jsp/main.jsp").forward(req,resp);
        }
         else {
             System.out.println("is error");

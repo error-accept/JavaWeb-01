@@ -1,5 +1,5 @@
-<%@ page import="generator.domain.TUser" %>
-<%@ page import="generator.domain.TTeacher" %>
+<%@ page import="com.lixiaoxin.domain.TUser" %>
+<%@ page import="com.lixiaoxin.domain.TTeacher" %>
 <%@ page import="java.util.List" %>
 <%--
   Created by IntelliJ IDEA.
@@ -16,18 +16,33 @@
 <html>
 <head>
     <title>投票系统主界面</title>
-
-
 </head>
 <body>
 <h1>欢迎来到投票系统</h1>
 <%--<% String username= (String) request.getAttribute("username"); %>--%>
 <h2>你好 ${username}</h2>
 <span><a  href="/JavaWeb-01/logout">退出</a></span>
-<a href="http://baidu.com">百度</a>
 <html>
 <head>
+    <style>
+        body{
+            align-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        table{
+            border-top: 3px solid blue;
+            border-left: 3px solid blue;
+            border-spacing: 0;
+        }
+        table th{
+            border-bottom: 3px solid blue;
+            border-right: 3px solid blue;
+            margin:auto;
+        }
+    </style>
     <title>客户管理</title>
+    <link href="../css/common.css">
 </head>
 <body>
 <table>
@@ -40,27 +55,15 @@
         List<TTeacher>  teachers = (List<TTeacher>) session.getAttribute("teachers");
         System.out.println(teachers);
         for (TTeacher t:teachers) { %>
-
             <tr>
                 <th><p><%=t.getName()%></p></th>
                 <th> <p><%=t.getDesc()%></p></th>
                 <th> <p><%=t.getVote()%></p></th>
                 <th><a href="/JavaWeb-01/VoteServlet?Id=<%=t.getId()%>&uId=<%=user.getId()%>"+>投票</a></th>
             </tr>
-
 <%}%>
-
-
-
-
 </table>
-
-
-
-
 </body>
 </html>
-
-
 </body>
 </html>

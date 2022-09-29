@@ -1,8 +1,8 @@
-package generator.Service;
+package com.lixiaoxin.Service;
 
-import generator.Util.SqlUtil;
-import generator.domain.TUser;
-import generator.mapper.TUserMapper;
+import com.lixiaoxin.Util.SqlUtil;
+import com.lixiaoxin.domain.TUser;
+import com.lixiaoxin.mapper.TUserMapper;
 
 import java.util.List;
 
@@ -17,5 +17,8 @@ public class UserService {
     }
     public TUser getByName(String name){
         return  tUserMapper.selectByName(name);
+    }
+    public int register(TUser user) {
+        return tUserMapper.insert(user);
     }
 }

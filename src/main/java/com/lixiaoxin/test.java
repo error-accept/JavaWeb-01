@@ -1,17 +1,15 @@
-package generator;
+package com.lixiaoxin;
 
-import generator.Service.TeacherService;
-import generator.domain.TTeacher;
-import generator.domain.TUser;
-import generator.mapper.TUserMapper;
+import com.lixiaoxin.Service.TeacherService;
+import com.lixiaoxin.domain.TTeacher;
+import com.lixiaoxin.domain.TUser;
+import com.lixiaoxin.mapper.TUserMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
-import org.mybatis.spring.batch.MyBatisBatchItemWriter;
 
-import javax.imageio.stream.ImageInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;

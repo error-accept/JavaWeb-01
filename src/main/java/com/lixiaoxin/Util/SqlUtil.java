@@ -1,17 +1,14 @@
-package generator.Util;
+package com.lixiaoxin.Util;
 
-import generator.mapper.TCommentMapper;
-import generator.mapper.TTeacherMapper;
-import generator.mapper.TUserMapper;
-import generator.mapper.TVoteMapper;
+import com.lixiaoxin.mapper.TTeacherMapper;
+import com.lixiaoxin.mapper.TUserMapper;
+import com.lixiaoxin.mapper.TVoteMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Date;
 
 public class SqlUtil {
     public static SqlSession getSqlSession() throws IOException {
@@ -41,15 +38,7 @@ public class SqlUtil {
         }
         return  mapper;
     }
-    public static TCommentMapper getTCommentMapper() {
-        TCommentMapper mapper = null;
-        try {
-            mapper = getSqlSession().getMapper(TCommentMapper.class);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        return  mapper;
-    }
+
     public static TTeacherMapper getTTeacherMapper() {
         TTeacherMapper mapper = null;
         try {

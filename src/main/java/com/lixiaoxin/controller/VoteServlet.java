@@ -1,11 +1,9 @@
-package generator.controller;
-
-import generator.Service.TeacherService;
-import generator.Service.VoteService;
-import generator.domain.TTeacher;
-import generator.domain.TUser;
-import generator.domain.TVote;
-
+package com.lixiaoxin.controller;
+import com.lixiaoxin.Service.TeacherService;
+import com.lixiaoxin.Service.VoteService;
+import com.lixiaoxin.domain.TTeacher;
+import com.lixiaoxin.domain.TUser;
+import com.lixiaoxin.domain.TVote;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
